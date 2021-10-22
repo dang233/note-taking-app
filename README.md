@@ -23,6 +23,5 @@ This web application allows the user to keep track of notes by submitting form c
 * There is a sort button which rearranges all notes based on their contents, date of creation, and titles
 * Users can tag notes with coloured labels
 * Users can change design settings (text size, font, colour etc.) maybe allow the user to set some default settings
-* Allow the user to format the content of a note (ex. Bullet points, highlighting)
-  *There will be a toolbar somewhere on the screen that offers the users these options, when the user selects an option the formatting option chosen will be applied  to all following text until the user deselects  
+* Allow the user to format the content of a note (ex. Bullet points, highlighting). There will be a toolbar on the screen that offers the users these options, when the user selects an option the formatting option chosen will be applied  to all following text until the user deselects  
 * When the user leaves the web application and comes back, all the notes are where they were left off from the last session
