@@ -25,4 +25,4 @@ This web application allows the user to keep track of notes by submitting form c
 * Users can change design settings (text size, font, colour etc.) maybe allow the user to set some default settings
 * Allow the user to format the content of a note (ex. Bullet points, highlighting). There will be a toolbar on the screen that offers the users these options, when the user selects an option the formatting option chosen will be applied  to all following text until the user deselects  
 * When the user leaves the web application and comes back, all the notes are where they were left off from the last session
-* When the name of an image file or the link to an image is typed. The app will display the photo in the note
+* To add an image, there will be an add image option. When the name of an image file or the link to an image is typed. The app will display the photo in the note
