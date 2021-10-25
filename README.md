@@ -27,3 +27,8 @@ This web application allows the user to keep track of notes by submitting form c
 * When the user leaves the web application and comes back, all the notes are where they were left off from the last session
 * To add an image, there will be an add image option. When the name of an image file or the link to an image is typed. The app will display the photo in the note
 * On the page to view all notes, a search bar will be added to quickly search for notes
+
+##Wireframes
+![Homepage 2](https://user-images.githubusercontent.com/89216084/138776400-b4e549a0-d2bd-473d-9d6a-b4cd0176254c.png)
+![Homepage 3](https://user-images.githubusercontent.com/89216084/138776401-61b23d0c-3624-41fa-9138-6cfdaea6b55f.png)
+![Homepage 4](https://user-images.githubusercontent.com/89216084/138776402-832ab151-91eb-48c0-b3a4-fbea9270e2c7.png)
