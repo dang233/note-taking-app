@@ -30,5 +30,10 @@ This web application allows the user to keep track of notes by submitting form c
 
 ##Wireframes
 ![Homepage 2](https://user-images.githubusercontent.com/89216084/138776400-b4e549a0-d2bd-473d-9d6a-b4cd0176254c.png)
+Note taking screen
+
 ![Homepage 3](https://user-images.githubusercontent.com/89216084/138776401-61b23d0c-3624-41fa-9138-6cfdaea6b55f.png)
+Note preview screen option 1
+
 ![Homepage 4](https://user-images.githubusercontent.com/89216084/138776402-832ab151-91eb-48c0-b3a4-fbea9270e2c7.png)
+Note preview screen option 2
