@@ -50,4 +50,9 @@ Tags menu <br/>
 Applying a tag to a note <br/>
 ![tag select](https://user-images.githubusercontent.com/92148329/139317777-f938cb61-3282-4fcb-9716-5de60239ecb8.PNG)
 
+Sort options
+![sort options](https://user-images.githubusercontent.com/92148329/139349642-19705ec7-b13f-4a5e-a9ac-5315634d87cb.PNG)
+
+General Layout
+![image](https://user-images.githubusercontent.com/92148329/139349604-0f672b36-8cc0-4454-a8bf-1aba1e73a5a0.png)
 
