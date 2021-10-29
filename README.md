@@ -41,18 +41,7 @@ Note preview screen option 1
 Note preview screen option 2
 ![Homepage 4](https://user-images.githubusercontent.com/89216084/138776402-832ab151-91eb-48c0-b3a4-fbea9270e2c7.png)
 
-Options menu is selected <br/>
-![options](https://user-images.githubusercontent.com/92148329/139317756-4ed83057-1da8-48de-bd8d-a455a2c6f320.PNG)
-
-Tags menu <br/>
-![tag menu](https://user-images.githubusercontent.com/92148329/139317764-b49324c6-7409-4e8a-a1df-6dc118cad106.PNG)
-
-Applying a tag to a note <br/>
-![tag select](https://user-images.githubusercontent.com/92148329/139317777-f938cb61-3282-4fcb-9716-5de60239ecb8.PNG)
-
-Sort options <br/>
-![sort options](https://user-images.githubusercontent.com/92148329/139349642-19705ec7-b13f-4a5e-a9ac-5315634d87cb.PNG)
-
 General Navigation <br/>
-![general navigation](https://user-images.githubusercontent.com/92148329/139349747-f9d87053-d1f9-4bbb-a792-023e5b955a25.PNG)
+![general navigation 2](https://user-images.githubusercontent.com/92148329/139445737-d2770045-d652-448e-8852-70cd6fdfe34e.PNG)
+
 
