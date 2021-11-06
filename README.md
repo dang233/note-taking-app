@@ -31,17 +31,10 @@ This web application allows the user to keep track of notes by submitting form c
 * An option to download the contents of individual text notes or all text notes as a .txt file with formatting removed
 * Adjustable menu themes (change menu colours of the application elements)
 
-## Wireframes
-Note taking screen
-![Homepage 2](https://user-images.githubusercontent.com/89216084/138776400-b4e549a0-d2bd-473d-9d6a-b4cd0176254c.png)
-
-Note preview screen option 1
-![Homepage 3](https://user-images.githubusercontent.com/89216084/138776401-61b23d0c-3624-41fa-9138-6cfdaea6b55f.png)
-
-Note preview screen option 2
-![Homepage 4](https://user-images.githubusercontent.com/89216084/138776402-832ab151-91eb-48c0-b3a4-fbea9270e2c7.png)
+## Wireframe
 
 General Navigation <br/>
-![general navigation 2](https://user-images.githubusercontent.com/92148329/139445737-d2770045-d652-448e-8852-70cd6fdfe34e.PNG)
+![general_navigation](https://user-images.githubusercontent.com/92148329/140616674-dec29f3f-ede2-43bc-aaae-2c80f3722ac9.PNG)
+
 
 
