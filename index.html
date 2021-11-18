@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="main.css" title="style">
+    <script src="scripts.js" defer></script>
+    <title>Note App</title>
+</head>
+<!-- use div.classname to quicky make divs with classes -->
+<body>
+    <div id="menu-win">
+        <div id="top-bar">
+            <input id="note-search" type="text" placeholder="search">
+            <div id="note-add" class="top-button" onclick="noteAddTest()"><span>Add</span></div>
+
+            <div id="note-sort" class="top-button"><span>Sort</span></div>
+            <div id="sort-menu"></div>
+
+            <div id="note-option" class="top-button"><span>Options</span></div>
+            <div id="option-menu"></div>
+        </div>
+
+        <div id="note-list"> 
+
+            <div class="note-el">
+                <span class="note-delete">X</span>
+                <span class="note-title">Title</span>
+                <div class="note-content">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam earum 
+                    neque suscipit odit blanditiis veniam provident, quisquam rem vero accusamus 
+                    repudiandae voluptatum ducimus quod soluta officiis possimus deserunt voluptas accusantium?</div>
+                <div class="note-tag-list">
+                    <div class="note-tag">tag</div>
+                    <div class="note-add-tag">+</div>
+                </div>     
+            </div>
+            
+        </div>
+    </div>
+
+    <div id="editor-win">
+        <input type="text" id="editor-title" placeholder="Title">
+        <div id="format-options">
+            <div class="format-el">Format Element</div>
+
+        </div>
+        <textarea name="" id="editor-text"></textarea>
+    </div>
+    
+    
+</body>
+</html>

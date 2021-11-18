@@ -1,0 +1,185 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+
+    --primary: #f9fbff;
+    --secondary: #EBECF0;
+    --tertiary: #A8C1F0;
+    --quaternary: #4972bd;
+    --button-color: #E2546D;
+
+    --font-size: 10px;
+}
+
+body {
+    background-color: #e6e6e6;
+    overflow-x: hidden;
+}
+
+input, textarea {
+    outline: none;
+}
+input {
+    padding-left: 1vw;
+}
+
+#menu-win {
+    background-color: var(--tertiary);
+    height: 100vh;
+    width: 40vw;
+    float: left;
+    font-size: 2vh;
+}
+
+#top-bar {
+    background-color: var(--quaternary);
+    width: 100%;
+    height: 6%;
+    padding: 1vh;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+}
+
+.top-button {
+    background-color: var(--button-color);
+    color: white;
+    width: 15%; 
+    margin-left: 0.5vw;
+
+    text-align: center;
+    overflow: hidden;
+    user-select: none;
+
+    border-radius: 1vh;
+}
+
+.top-button:hover {
+    background-color: #e87187;
+}
+
+.top-button span {
+    position: relative;
+    top: 20%;
+    bottom: 50%;
+}
+
+
+#note-search {
+    width: 50%;
+    font-size: 2vh;
+    border-radius: 1vh;
+    border-style: none;
+}
+
+#note-search::placeholder {
+    text-align: center;
+}
+
+#note-list {
+    background-color: var(--secondary);
+    height: 94%;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
+
+.note-el {
+    background-color: var(--primary);
+    width: 90%;
+    height: 20vh;
+    margin: auto;
+    margin-top: 3vh;
+    padding: 3%;
+
+    border-radius: 1.5vh;
+    box-shadow: 0 0.5vh 0.5vh 0vh #d3d4d6;
+}
+
+.note-title {
+    display: block;
+    font-size: 3vh;
+    font-weight: bold;
+    width: 80%;
+    height:3.5vh;
+    overflow: hidden;
+    resize:none;
+}
+
+.note-delete {
+    float: right;
+}
+
+.note-content {
+    height: 10vh;
+    overflow: hidden;
+}
+
+.note-tag-list {
+    display: flex;
+    flex-direction: row;
+    overflow-x: none;
+    overflow-y: hidden;
+}
+
+.note-tag {
+    background-color: var(--button-color);
+    color: white;
+    width: 15%; 
+    margin-right: 0.5vw;
+    text-align: center;
+    border-radius: 2vh;
+}
+
+.note-add-tag {
+    background-color: #d3d4d6;
+    color: white;
+    width: 1.2vw;
+    border-radius: 5vh;
+    text-align: center;
+}
+
+
+
+
+
+#editor-win {
+    background-color: var(--primary);
+    height: 100vh;
+    width: 59%;
+    float: right;
+}
+
+#editor-title {
+    width:100%;
+    height: 8vh;
+    font-size: 3vh;
+    border-color: lightgray;
+    border: lightgray 0.2vh solid;
+}
+#note-title::placeholder {
+    text-align: center;
+}
+
+#editor-text {
+    display: block;
+    width: 100%;
+    height: 86%;
+}
+
+#format-options {
+    background-color: #FFFFFF;
+    width: 100%;
+    height: 6vh;
+    border: lightgray 0.2vh solid;
+
+    display: flex;
+    flex-direction: row;
+}
+
+.format-el {
+    height: 100%;
+}
