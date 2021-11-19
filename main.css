@@ -10,12 +10,13 @@
     --quaternary: #4972bd;
     --button-color: #E2546D;
 
-    --font-size: 10px;
+    --font-size: 20px;
 }
 
 body {
-    background-color: #e6e6e6;
+    background-color: var(--secondary);
     overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 input, textarea {
@@ -26,7 +27,6 @@ input {
 }
 
 #menu-win {
-    background-color: var(--tertiary);
     height: 100vh;
     width: 40vw;
     float: left;
@@ -42,7 +42,50 @@ input {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    border-radius: 0 0 1.5vh 0;
     
+}
+
+.top-bar-menu {
+    background-color: var(--quaternary);
+    width: 25%;
+    height: 75%;
+    position: absolute;
+    left: 37.5%;
+    top: 100%;
+    border-radius: 2vh;
+
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes menuTransition {
+    0% {
+        top: 100%;
+    }
+    100% {
+        top: 12.5%;
+    }
+}
+
+@keyframes blurTransition {
+    0% { 
+        display: block;
+        backdrop-filter: blur(0px); }
+    100% { 
+        backdrop-filter: blur(4px); 
+    }
+}
+
+
+#blur-bg {
+    display: none;
+    background-color: rgba(255, 255, 255, 0.1);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
 }
 
 .top-button {
@@ -94,6 +137,7 @@ input {
     margin: auto;
     margin-top: 3vh;
     padding: 3%;
+    user-select: none;
 
     border-radius: 1.5vh;
     box-shadow: 0 0.5vh 0.5vh 0vh #d3d4d6;
@@ -110,11 +154,12 @@ input {
 }
 
 .note-delete {
+    color: #c2c3c4;
     float: right;
 }
 
 .note-content {
-    height: 10vh;
+    height: 9.8vh;
     overflow: hidden;
 }
 
@@ -123,12 +168,14 @@ input {
     flex-direction: row;
     overflow-x: none;
     overflow-y: hidden;
+    height: 2.4vh;
 }
 
 .note-tag {
     background-color: var(--button-color);
     color: white;
-    width: 15%; 
+    padding-left: 0.5vw;
+    padding-right: 0.5vw;
     margin-right: 0.5vw;
     text-align: center;
     border-radius: 2vh;
@@ -137,17 +184,33 @@ input {
 .note-add-tag {
     background-color: #d3d4d6;
     color: white;
-    width: 1.2vw;
-    border-radius: 5vh;
+    width: 2.5vh;
+    border-radius: 1.25vh;
     text-align: center;
+}
+
+.note-add-tag:hover .note-add-tag-list {
+    display: block;
+}
+
+.note-add-tag-list {
+    position: absolute;
+    background-color: var(--secondary);
+    display: none;
+    width: 15vw;
+    height: 45vh;
+    box-shadow: 0 0.5vh 0.5vh 0vh #d3d4d6;
+    border-radius: 1.5vh;
+}
+
+.note-date {
+    color: #c2c3c4;
+    float: right;
 }
 
 
 
-
-
 #editor-win {
-    background-color: var(--primary);
     height: 100vh;
     width: 59%;
     float: right;
@@ -157,29 +220,100 @@ input {
     width:100%;
     height: 8vh;
     font-size: 3vh;
-    border-color: lightgray;
-    border: lightgray 0.2vh solid;
-}
-#note-title::placeholder {
-    text-align: center;
+    border: var(--secondary) 0.2vh solid;
+    border-radius: 0 0 0 2vh;
 }
 
 #editor-text {
     display: block;
+    font-size: var(--font-size);
     width: 100%;
     height: 86%;
+    padding: 2vh;
+    border-color: var(--secondary);
+    border-radius: 2vh 0 0 0;
 }
 
+
+
+
 #format-options {
-    background-color: #FFFFFF;
+    background-color: var(--secondary);
     width: 100%;
-    height: 6vh;
-    border: lightgray 0.2vh solid;
+    height: 5vh;
+    border: var(--secondary) 0.2vh solid;
+    user-select: none;
 
     display: flex;
     flex-direction: row;
 }
 
 .format-el {
-    height: 100%;
+    background-color: var(--primary);
+    text-align: center;
+    height: 80%;
+    padding-left: 1vh;
+    padding-right: 1vh;
+    margin: auto 0.5vh auto 0.5vh;
+    border-radius: 1vh;
+    box-shadow: 0 0.2vh 0.5vh 0vh #d3d4d6;
+    font-size: 1.7vh;
+}
+
+.format-el span {
+    position: relative;
+    top: 25%;
+    bottom: 50%;
+}
+
+.format-button:hover {
+    background-color: #d8d8dc;
+}
+
+.format-el:hover .format-el-dropdown {
+    display: block;
+}
+
+.dropdown:hover {
+    animation-name: format-el-animation;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes format-el-animation {
+    100% {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+.format-el-dropdown {
+    position: relative;
+    bottom: 50%;
+    background-color: var(--primary);
+    display: none;
+    width: 10vw;
+    height: 30vh;
+    box-shadow: 0 0.5vh 0.5vh 0vh #d3d4d6;
+    border-radius: 1.5vh;
+    overflow-x: hidden;
+    overflow-y: scroll;
+
+    animation-name: format-el-dropdown-animation;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes format-el-dropdown-animation {
+    0% {
+        width: 0vw;
+        height: 0vh;
+    }
+    50% {
+        width: 10vw;
+        height: 0vh;
+    }
+    100% {
+        height: 45vh;
+    }
 }
