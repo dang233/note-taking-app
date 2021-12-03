@@ -19,6 +19,16 @@ body {
     overflow-y: hidden;
 }
 
+footer {
+    display: none;
+    background-color: #d9dadd;
+    position: fixed;
+    width: 100%;
+    text-align: center;
+    bottom: 0%;
+    padding: 0.5vh;
+}
+
 input, textarea {
     outline: none;
 }
@@ -46,26 +56,81 @@ input {
     
 }
 
-.top-bar-menu {
+.menu {
     background-color: var(--quaternary);
-    width: 25%;
-    height: 75%;
+    width: 20%;
     position: absolute;
-    left: 37.5%;
+    left: 40%;
     top: 100%;
     border-radius: 2vh;
+    user-select: none;
+
+    padding: 2vh;
 
     animation-duration: 0.5s;
     animation-fill-mode: forwards;
 }
-
 @keyframes menuTransition {
     0% {
         top: 100%;
     }
     100% {
-        top: 12.5%;
+        top: 18%;
     }
+}
+@keyframes menuExit {
+    0% {
+        top: 18%;
+    }
+    100% {
+        top: 100%;
+    }
+}
+
+.menu-el {
+    background-color: var(--button-color);
+    color: white;
+    width: 70%; 
+    height: 4vh;
+    margin-bottom: 1vw;
+    margin-top: 2vh;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 2vh;
+    
+    text-align: center;
+    overflow: hidden;
+    border-radius: 2vh;
+}
+.menu-el span {
+    position: relative;
+    top: 0.7vh;
+}
+
+.menu-top {
+    text-align: center;
+}
+
+.menu-title {
+    font-size: 4vh;
+    color: white;
+}
+.menu-exit {
+    float: right;
+    font-size: 2.5vh;
+    color: white;
+}
+
+.menu-text {
+    color: white;
+    text-align: center;
+}
+
+#info div {
+    text-align: none;
+}
+#info div span .menu-text {
+    text-align: none;
 }
 
 @keyframes blurTransition {
@@ -101,8 +166,8 @@ input {
     border-radius: 1vh;
 }
 
-.top-button:hover {
-    background-color: #e87187;
+.top-button:hover, .menu-el:hover {
+    background-color: #dc798b;
 }
 
 .top-button span {
@@ -112,15 +177,18 @@ input {
 }
 
 
-#note-search {
-    width: 50%;
+#search-input {
+    width: 60%;
     font-size: 2vh;
     border-radius: 1vh;
     border-style: none;
+    padding: 0;
+    padding-left: 2vh;
 }
 
-#note-search::placeholder {
+#search-input::placeholder {
     text-align: center;
+    padding-left: 0;
 }
 
 #note-list {
@@ -136,11 +204,15 @@ input {
     height: 20vh;
     margin: auto;
     margin-top: 3vh;
+    margin-bottom: 3vh;
     padding: 3%;
     user-select: none;
 
     border-radius: 1.5vh;
     box-shadow: 0 0.5vh 0.5vh 0vh #d3d4d6;
+}
+.active {
+    background-color: #dadada;
 }
 
 .note-title {
@@ -169,6 +241,7 @@ input {
     overflow-x: none;
     overflow-y: hidden;
     height: 2.4vh;
+    font-family: cour;
 }
 
 .note-tag {
@@ -181,31 +254,17 @@ input {
     border-radius: 2vh;
 }
 
-.note-add-tag {
-    background-color: #d3d4d6;
-    color: white;
-    width: 2.5vh;
-    border-radius: 1.25vh;
-    text-align: center;
-}
-
-.note-add-tag:hover .note-add-tag-list {
-    display: block;
-}
-
-.note-add-tag-list {
-    position: absolute;
-    background-color: var(--secondary);
-    display: none;
-    width: 15vw;
-    height: 45vh;
-    box-shadow: 0 0.5vh 0.5vh 0vh #d3d4d6;
-    border-radius: 1.5vh;
+.tag-el {
+    text-align: none;
 }
 
 .note-date {
     color: #c2c3c4;
     float: right;
+}
+
+.note-delete:hover, .menu-exit:hover {
+    color: rgb(248, 63, 63);
 }
 
 
@@ -228,7 +287,7 @@ input {
     display: block;
     font-size: var(--font-size);
     width: 100%;
-    height: 86%;
+    height: 87%;
     padding: 2vh;
     border-color: var(--secondary);
     border-radius: 2vh 0 0 0;
@@ -266,7 +325,7 @@ input {
     bottom: 50%;
 }
 
-.format-button:hover {
+.format-button:hover, .format-sub-el:hover {
     background-color: #d8d8dc;
 }
 
@@ -314,6 +373,26 @@ input {
         height: 0vh;
     }
     100% {
-        height: 45vh;
+        height: 25vh;
     }
+}
+
+.format-sub-el {
+    padding-top: 0.5vh;
+    padding-bottom: 0.5vh;
+}
+
+#save {
+    background-color: #75e491;
+    padding-left: 3vh;
+    padding-right: 3vh;
+}
+#save:hover {
+    background-color: #baffcb;
+}
+#save.yellow-save {
+    background-color: #f8f6a4;
+}
+#save.yellow-save:hover {
+    background-color: #ffffe1;
 }

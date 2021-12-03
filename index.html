@@ -6,17 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="main.css" title="style">
     <script src="scripts.js" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <title>Note App</title>
 </head>
 <!-- use div.classname to quicky make divs with classes -->
 <body>
     <div id="menu-win">
         <div id="top-bar">
-            <input id="note-search" type="text" placeholder="Search">
-            <div id="note-add" class="top-button" onclick="noteAddTest()"><span>New Note</span></div>
-
-            <div id="note-sort" class="top-button" onclick="showSort()"><span>Sort</span></div>
-            <div id="note-option" class="top-button" onclick="showOption()"><span>Options</span></div>
+            <input id="search-input" type="text" placeholder="Search">
+            <div id="button-add" class="top-button"><span>New Note</span></div>
+            <div id="button-option" class="top-button"><span>Options</span></div>
         </div>
 
         <div id="note-list"> 
@@ -33,9 +32,6 @@
                     <div class="note-tag">favourites</div>
                     <div class="note-tag">school</div>
                     <div class="note-tag">tag</div>
-                    <div class="note-add-tag">+
-                        <div class="note-add-tag-list"></div>
-                    </div>
                 </div>     
             </div>
             
@@ -45,24 +41,53 @@
     <div id="editor-win">
         <input type="text" id="editor-title" placeholder="Title">
         <div id="format-options">
-            <div id="undo" class="format-el format-button"><span>Undo</span></div>
-            <div id="redo" class="format-el format-button"><span>Redo</span></div>
             <div id="font" class="format-el dropdown"><span>Font</span><div class="format-el-dropdown"></div></div>
             <div id="font-size" class="format-el dropdown"><span>Font Size</span><div class="format-el-dropdown"></div></div>
             <div id="font-style" class="format-el dropdown"><span>Font Style</span><div class="format-el-dropdown"></div></div>
-            <div id="text-color" class="format-el dropdown"><span>Text Color</span><div class="format-el-dropdown"></div></div>
-            <div id="set-default" class="format-el format-button"><span>Set Default</span></div>
+            <div id="font-color" class="format-el dropdown"><span>Text Color</span><div class="format-el-dropdown"></div></div>
+            <div id="import-template" class="format-el format-button"><span>Import Template</span></div>
             <div id="info" class="format-el format-button"><span>Info</span></div>
             <div id="download" class="format-el format-button"><span>Download</span></div>
-            <div id="help" class="format-el format-button"><span>Help</span></div>
+            <div id="save" class="format-el format-button"><span>Save</span></div>
 
         </div>
         <textarea name="" id="editor-text" placeholder="Enter Text"></textarea>
     </div>
 
     <div id="blur-bg"></div>
-    <div id="menu-option" class="top-bar-menu">Option Menu (reload the site because I haven't done the code to remove this yet)</div>
-    <div id="menu-sort" class="top-bar-menu">Sort Menu (reload the site because I haven't done the code to remove this yet)</div>
+
+    <div id="menu-option" class="menu">
+        <div class="menu-top">
+            <span class="menu-title">Options</span>
+            <span class="menu-exit">X</span>
+        </div>
+        <div id="project-info"class="menu-el"><span>Project Info</span></div>
+        <div id="delete-all" class="menu-el"><span>Delete All</span></div>
+    </div>
+
+    <div id="menu-info" class="menu">
+        <div class="menu-top">
+            <span class="menu-title">Info</span>
+            <span class="menu-exit">X</span>
+        </div>
+        <div><span class='menu-text'>Total Characters: </span><span class='menu-text' id='note-length'></span></div>
+        <div><span class='menu-text'>Total Words: </span><span class='menu-text' id='note-word-length'></span></div>
+        <div><span class='menu-text'>Date Created: </span><span class='menu-text' id='date-of-creation'></span></div>
+        <div><span class='menu-text'>Last Modified: </span><span class='menu-text' id="last-modified"></span></div>
+    </div>
+
+    <div id="menu-template" class="menu">
+        <div class="menu-top">
+            <span class="menu-title">Templates</span>
+            <span class="menu-exit">X</span>
+        </div>
+        <div class="menu-text">Import a template from the server </div>
+        <div class='menu-text'>WARNING: this will clear contents of the active note</div>
+        <div id="template-list"></div>
+    </div>
+
+
+    <footer>©2021 Anthony Dang</footer>
     
     
 </body>
