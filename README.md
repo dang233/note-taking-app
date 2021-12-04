@@ -23,6 +23,17 @@ This web application allows the user to keep track of notes by submitting form c
 * An option to download the contents of individual text notes or all text notes as a .txt file with formatting removed
 * Adjustable menu themes (change menu colours of the application elements)
 
+## Features
+* Add, edit, and delete notes saved on the local storage
+* A note selection menu shows all user-created notes and a preview of their contents
+* Customize the fonts, font sizes, and text colors of note contents
+* View total character count, word count, date of creation and date of modification
+* Use the search to quickly find a string in a note's title or contents
+* Download a note as a .txt file
+* Delete all notes through the options menu
+* Import a note template from a local server
+* (due to time restraints, the ability to tag and sort notes was removed)
+
 ## Wireframe
 
 General Navigation <br/>
